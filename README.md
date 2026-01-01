@@ -1,16 +1,19 @@
-## Hi there 👋
+## Hi, I’m Dina Usman 👋
 
-<!--
-**dinamain/dinamain** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+I’m a B.Tech Computer Science student (2026) interested in
+Python development, web data aggregation, and analytics systems.
 
-Here are some ideas to get you started:
+### What I work on
+- Python-based web data aggregation & crawling
+- API data ingestion & analytics pipelines
+- Config-driven, clean, production-minded systems
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+### Key Projects
+- Web Data Aggregation & Price Analytics Pipeline
+- API-Based Weather Data Ingestion & Analytics Pipeline
+
+I’m currently preparing for **Junior Python / Software Engineer roles**.
+
+📫 Connect with me on LinkedIn
+www.linkedin.com/in/dina-usman888
+
