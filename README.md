@@ -16,8 +16,6 @@ CSE Graduate (KTU, 2026) · 3 production-deployed platforms · Building at the i
 
 ## What I build
 
-## What I build
-
 I don't just write code — I build systems that work in production.
 
 3 solo-built, fully deployed platforms · Django · FastAPI · React · LangChain · RAG · Docker
