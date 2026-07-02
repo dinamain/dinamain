@@ -16,16 +16,15 @@ CSE Graduate (KTU, 2026) · 3 production-deployed platforms · Building at the i
 
 ## What I build
 
+## What I build
+
 I don't just write code — I build systems that work in production.
 
-Over the last year I've solo-built and deployed three full-stack platforms: a real-time messaging system, an AI-powered event platform, and a RAG document Q&A system. I own every layer — backend architecture, REST APIs, React frontends, PostgreSQL schema design, Docker containerisation, and CI/CD pipelines.
+3 solo-built, fully deployed platforms · Django · FastAPI · React · LangChain · RAG · Docker
 
-A few things that happened along the way:
-- Found and fixed a real scoping bug in Django REST Framework's `ScopedRateThrottle` by reading the framework source code
-- Resolved an OOM crash on Render's free tier by switching from PyTorch-based embeddings (~2GB) to FastEmbed ONNX (~130MB)
-- Debugged a Windows-specific SQLite file lock in ChromaDB by switching to a shared vectorstore instance at FastAPI startup
-
----
+- 🔧 Found and fixed a real scoping bug in DRF's `ScopedRateThrottle` by reading framework source code
+- 🧠 Resolved an OOM crash on Render free tier — switched PyTorch embeddings (2GB) to FastEmbed ONNX (130MB)
+- 🐛 Debugged a Windows SQLite file lock in ChromaDB — shared vectorstore instance at FastAPI startup fixed it
 
 ## Featured projects
 
