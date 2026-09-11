@@ -4,7 +4,7 @@
 
 ### Full Stack Developer · Python · Django · FastAPI · React · AI/RAG Systems
 
-CSE Graduate (KTU, 2026) · 3 production-deployed platforms · Building at the intersection of backend engineering and GenAI
+CSE Graduate (KTU, 2026) · 4 production-deployed platforms · Building at the intersection of backend engineering and GenAI
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/dina-usman888)
 [![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:dinausman2001@gmail.com)
@@ -12,24 +12,34 @@ CSE Graduate (KTU, 2026) · 3 production-deployed platforms · Building at the i
 
 </div>
 
----
-
 ## What I build
 
 I don't just write code — I build systems that work in production.
 
-3 solo-built, fully deployed platforms · Django · FastAPI · React · LangChain · RAG · Docker
+4 solo-built, fully deployed platforms · Django · FastAPI · React · LangGraph · LangChain · RAG · Docker
 
 - 🔧 Found and fixed a real scoping bug in DRF's `ScopedRateThrottle` by reading framework source code
 - 🧠 Resolved an OOM crash on Render free tier — switched PyTorch embeddings (2GB) to FastEmbed ONNX (130MB)
 - 🐛 Debugged a Windows SQLite file lock in ChromaDB — shared vectorstore instance at FastAPI startup fixed it
+- 🤖 Diagnosed a Groq-specific failure where the model wrapped valid tool calls in malformed XML tags — built a direct recovery step instead of relying on retries
 
 ## Featured projects
+
+### 🤖 [Agentic Research & Automation Assistant](https://github.com/dinamain/agentic-research-assistant) — Live
+> A multi-tool AI agent with planning, conditional tool routing, and self-correcting reasoning — not a fixed pipeline.
+
+LangGraph agent (Planner → Agent → Tools via conditional edges) calling Groq's inference API, with document search (ChromaDB) and live web search (Tavily). Custom evaluation harness (10 test cases) with systemic-failure detection. FastAPI streaming (SSE) for real-time responses.
+
+**Stack:** LangGraph · LangChain · Groq · Tavily · ChromaDB · FastAPI (SSE) · React
+
+🔗 [Live Demo](https://agentic-assistant-frontend.vercel.app)
+
+---
 
 ### 🔴 [RAG Document Q&A System](https://github.com/dinamain/rag-document-qa) — Live
 > Upload any PDF and ask questions. Get answers with source citations — powered by RAG.
 
-PDF ingestion → FastEmbed ONNX embeddings → ChromaDB vector store → semantic retrieval → Groq Llama 3.1 inference → source-cited answer
+PDF ingestion → FastEmbed ONNX embeddings → ChromaDB vector store → semantic retrieval → cross-encoder reranking → Groq inference → three-way answer verification to catch ungrounded outputs.
 
 **Stack:** LangChain · ChromaDB · FastEmbed (ONNX) · Groq · FastAPI · React · Docker Compose · GitHub Actions
 
@@ -51,7 +61,7 @@ Django Channels + Redis pub/sub WebSocket layer with typing indicators, delivery
 ### 🎫 [Event Registration Platform](https://github.com/dinamain/event-registration-platform) — AI-Powered Event Management
 > Full-stack event platform with LLM integration and async task processing.
 
-Groq Llama 3.3 for AI-generated event descriptions · Celery + Redis async email pipeline · DRF ScopedRateThrottle (with a bug I found and fixed) · Pytest suite · Kubernetes manifests · GitHub Actions CI/CD
+Groq LLM integration for AI-generated event descriptions · Celery + Redis async email pipeline · DRF ScopedRateThrottle (with a bug I found and fixed) · Pytest suite · GitHub Actions CI/CD
 
 **Stack:** Django · DRF · FastAPI · Celery · Redis · React · PostgreSQL · Docker · Kubernetes
 
@@ -83,6 +93,7 @@ Groq Llama 3.3 for AI-generated event descriptions · Celery + Redis async email
 
 **AI / GenAI**
 
+![LangGraph](https://img.shields.io/badge/LangGraph-1C3C3C?style=flat-square&logoColor=white)
 ![LangChain](https://img.shields.io/badge/LangChain-1C3C3C?style=flat-square&logo=langchain&logoColor=white)
 ![ChromaDB](https://img.shields.io/badge/ChromaDB-FF6F00?style=flat-square&logoColor=white)
 ![Groq](https://img.shields.io/badge/Groq-F55036?style=flat-square&logoColor=white)
@@ -114,7 +125,8 @@ Groq Llama 3.3 for AI-generated event descriptions · Celery + Redis async email
 
 - Introduction to Artificial Intelligence (AI) — IBM · Coursera
 - Artificial Intelligence Essentials V2 — IBM · Coursera
-- Machine Learning through Python — ICFOSS · Central University of Kerala
+- Data Structures and Algorithms — NPTEL, IIT Madras
+- Machine Learning through Python — ICFOSS, Central University of Kerala
 
 ---
 
