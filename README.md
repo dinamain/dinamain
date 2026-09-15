@@ -4,7 +4,7 @@
 
 ### Full Stack Developer · Python · Django · FastAPI · React · AI/RAG Systems
 
-CSE Graduate (KTU, 2026) · 4 production-deployed platforms · Building at the intersection of backend engineering and GenAI
+CSE Graduate (KTU, 2026) · 5 production-deployed platforms · Building at the intersection of backend engineering and GenAI
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/dina-usman888)
 [![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:dinausman2001@gmail.com)
@@ -16,12 +16,13 @@ CSE Graduate (KTU, 2026) · 4 production-deployed platforms · Building at the i
 
 I don't just write code — I build systems that work in production.
 
-4 solo-built, fully deployed platforms · Django · FastAPI · React · LangGraph · LangChain · RAG · Docker
+5 solo-built, fully deployed platforms · Django · FastAPI · React · LangGraph · LangChain · RAG · Docker
 
 - 🔧 Found and fixed a real scoping bug in DRF's `ScopedRateThrottle` by reading framework source code
 - 🧠 Resolved an OOM crash on Render free tier — switched PyTorch embeddings (2GB) to FastEmbed ONNX (130MB)
 - 🐛 Debugged a Windows SQLite file lock in ChromaDB — shared vectorstore instance at FastAPI startup fixed it
 - 🤖 Diagnosed a Groq-specific failure where the model wrapped valid tool calls in malformed XML tags — built a direct recovery step instead of relying on retries
+- ☁️ Debugged three separate AWS Lambda filesystem/dependency failures (read-only filesystem, outdated system sqlite3) to deploy a containerized MCP server — root-caused each one from raw CloudWatch tracebacks
 
 ## Featured projects
 
@@ -63,9 +64,22 @@ Django Channels + Redis pub/sub WebSocket layer with typing indicators, delivery
 
 Groq LLM integration for AI-generated event descriptions · Celery + Redis async email pipeline · DRF ScopedRateThrottle (with a bug I found and fixed) · Pytest suite · GitHub Actions CI/CD
 
-**Stack:** Django · DRF · FastAPI · Celery · Redis · React · PostgreSQL · Docker · Kubernetes
+**Stack:** Django · DRF · FastAPI · Celery · Redis · React · PostgreSQL · Docker
 
 🔗 [Live Demo](https://event-registration-platform-rho.vercel.app)
+
+---
+
+## Backend / Infrastructure Tools
+
+### ⚙️ [mcp-rag-tools](https://github.com/dinamain/mcp-rag-tools) — MCP Server on AWS Lambda
+> An MCP (Model Context Protocol) server exposing retrieval and hallucination-detection tools from my RAG Document Q&A system — callable by any MCP-compatible client (Claude Desktop, agents) without duplicating the underlying logic per client.
+
+Deployed as a Lambda **container image** (not a zip) since ChromaDB and ONNX Runtime ship platform-specific compiled binaries that fail under standard zip-based Lambda deployment. Debugged three separate Lambda-specific filesystem and native-dependency failures — none reproducible locally — by reading raw Python tracebacks in CloudWatch Logs.
+
+**Stack:** MCP Python SDK · FastAPI · Mangum · Docker · AWS Lambda · API Gateway · ECR
+
+🔗 [Live API](https://c6q1zpx6ki.execute-api.ap-south-1.amazonaws.com/health)
 
 ---
 
@@ -102,7 +116,7 @@ Groq LLM integration for AI-generated event descriptions · Celery + Redis async
 
 ![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white)
 ![GitHub Actions](https://img.shields.io/badge/GitHub%20Actions-2088FF?style=flat-square&logo=githubactions&logoColor=white)
-![Kubernetes](https://img.shields.io/badge/Kubernetes-326CE5?style=flat-square&logo=kubernetes&logoColor=white)
+![AWS Lambda](https://img.shields.io/badge/AWS%20Lambda-FF9900?style=flat-square&logo=awslambda&logoColor=white)
 
 ---
 
@@ -121,7 +135,7 @@ Groq LLM integration for AI-generated event descriptions · Celery + Redis async
 
 ## Education & certifications
 
-**B.Tech — Computer Science Engineering** · College of Engineering Thalassery, KTU, Kerala · CGPA: 8.06/10 · 2022–2026
+**B.Tech — Computer Science Engineering** · APJ Abdul Kalam Technological University (KTU), Kerala · CGPA: 8.06/10 · 2022–2026
 
 - Introduction to Artificial Intelligence (AI) — IBM · Coursera
 - Artificial Intelligence Essentials V2 — IBM · Coursera
